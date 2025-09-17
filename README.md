@@ -1,5 +1,9 @@
 # Sailor WordPress Theme & Plugins
 
+#### Preview
+
+- [Demo](https://themewagon.github.io/Sailor/)
+
 ## Mô tả dự án
 
 - Theme WordPress tự phát triển, không dùng theme có sẵn.
