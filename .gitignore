@@ -2,6 +2,7 @@
 !plugins/
 !themes/
 !.gitignore
+!readme.md
 
 # Loại trừ folder languages
 languages/
