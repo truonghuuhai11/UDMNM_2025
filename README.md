@@ -1,6 +1,6 @@
 # Sailor WordPress Theme & Plugins
 
-#### Preview
+#### Trang Tham Khảo
 
 - [Demo](https://themewagon.github.io/Sailor/)
 
