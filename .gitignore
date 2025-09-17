@@ -1,0 +1,27 @@
+/*
+!plugins/
+!themes/
+!.gitignore
+
+# Loại trừ folder languages
+languages/
+
+# Chỉ theo dõi 4 plugin cụ thể
+plugins/*
+!plugins/advanced-custom-fields/
+!plugins/Plugin Contact Form/
+!plugins/Plugin Multi Chat/
+!plugins/polylang/
+
+# Loại trừ file index.php trong plugins
+plugins/index.php
+
+# Chỉ theo dõi theme sailor-themes
+themes/*
+!themes/sailor-themes/
+
+# Loại trừ file index.php trong themes
+themes/index.php
+
+# Loại trừ file index.php ở ngoài cùng
+index.php
