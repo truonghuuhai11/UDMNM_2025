@@ -48,12 +48,14 @@
 
   /**
    * Toggle mobile nav dropdowns
+   * SỬA: KHÔNG chặn sự kiện click vào <a> cha (About) nếu có href khác '#'
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
     navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
+      // Nếu icon được click, chỉ mở submenu, KHÔNG preventDefault với thẻ <a> cha
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
+      // KHÔNG dùng e.preventDefault() với thẻ <a> cha chứa href thực sự
       e.stopImmediatePropagation();
     });
   });

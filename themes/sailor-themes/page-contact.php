@@ -56,7 +56,7 @@ get_header();
         </div>
 
         <div class="col-lg-8">
-          <?php echo do_shortcode('[contact-form-7 id="1" title="Contact form 1"]'); ?>
+          <?php echo do_shortcode('[sailor_contact_form]'); ?>
         </div><!-- End Contact Form -->
 
       </div>

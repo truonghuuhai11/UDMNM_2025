@@ -5,7 +5,6 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title><?php wp_title('|', true, 'right'); ?></title>
   <?php wp_head(); ?>
-  <!-- Vendor CSS Files & Fonts ở functions.php -->
 </head>
 <body <?php body_class(); ?>>
 <header id="header" class="header d-flex align-items-center sticky-top">
@@ -15,12 +14,14 @@
     </a>
     <nav id="navmenu" class="navmenu">
       <?php
+        // Đã loại bỏ icon mũi tên thủ công, chỉ dùng walker sinh ra icon
         wp_nav_menu([
           'theme_location' => 'main-menu',
           'container' => false,
-          'menu_class' => '',
+          'menu_class' => 'menu',
           'fallback_cb' => false,
-          'items_wrap' => '<ul>%3$s</ul>',
+          'items_wrap' => '<ul class="menu">%3$s</ul>',
+          'walker' => new Bootstrap_NavWalker()
         ]);
       ?>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
