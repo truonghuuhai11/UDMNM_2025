@@ -59,9 +59,10 @@ get_header();
             <div class="portfolio-info">
               <h4><?php the_title(); ?></h4>
               <p><?php echo get_the_excerpt(); ?></p>
-                <?php $link = get_post_meta(get_the_ID(), '_portfolio_link', true); if ($link): ?>
-                  <p><a href="<?php echo esc_url($link); ?>" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Xem sản phẩm</a></p>
-                <?php endif; ?>
+                <?php $link = get_post_meta(get_the_ID(), '_portfolio_link', true); ?>
+              <?php if ($link): ?>
+                <p><a href="<?php echo esc_url($link); ?>" target="_blank" rel="noopener" class="btn btn-sm btn-primary">View Product</a></p>
+              <?php endif; ?>
               <a href="<?php echo get_the_post_thumbnail_url(); ?>" title="<?php the_title(); ?>" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
             </div>
           </div>

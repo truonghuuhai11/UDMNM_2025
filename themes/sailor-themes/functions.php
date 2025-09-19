@@ -19,6 +19,8 @@ function sailor_theme_assets() {
   wp_enqueue_script('purecounter', get_template_directory_uri().'/assets/vendor/purecounter/purecounter_vanilla.js', array(), null, true);
   wp_enqueue_script('waypoints', get_template_directory_uri().'/assets/vendor/waypoints/noframework.waypoints.js', array(), null, true);
   wp_enqueue_script('swiper', get_template_directory_uri().'/assets/vendor/swiper/swiper-bundle.min.js', array(), null, true);
+// Bật lazy load ảnh cho toàn bộ website (WordPress 5.5+)
+add_filter('wp_lazy_loading_enabled', '__return_true');
 }
 add_action('wp_enqueue_scripts', 'sailor_theme_assets');
 
