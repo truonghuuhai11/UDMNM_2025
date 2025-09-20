@@ -4,6 +4,10 @@
 
 - [Demo](https://themewagon.github.io/Sailor/)
 
+#### Domain triển khai
+
+- [Demo](https://sailor.page.gd/)
+
 ## Mô tả dự án
 
 - Theme WordPress tự phát triển, không dùng theme có sẵn.
