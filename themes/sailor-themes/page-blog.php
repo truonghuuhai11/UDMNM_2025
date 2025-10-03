@@ -42,11 +42,11 @@ get_header();
                     <ul>
                       <li class="d-flex align-items-center"><i class="bi bi-person"></i> <?php the_author_posts_link(); ?></li>
                       <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <time datetime="<?php the_time('c'); ?>"><?php the_time('M j, Y'); ?></time></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></li>
+                      <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <?php comments_popup_link(__('No Comments', 'sailor-theme'), __('1 Comment', 'sailor-theme'), __('% Comments', 'sailor-theme')); ?></li>
                     </ul>
                   </div>
                   <div class="content"><?php the_excerpt(); ?></div>
-                  <div class="read-more"><a href="<?php the_permalink(); ?>">Read More</a></div>
+                  <div class="read-more"><a href="<?php the_permalink(); ?>"><?php echo __('Read More', 'sailor-theme'); ?></a></div>
                 </article>
               </div>
               <?php
@@ -79,13 +79,13 @@ get_header();
 
           <!-- Search Widget -->
           <div class="search-widget widget-item">
-            <h3 class="widget-title">Search</h3>
+            <h3 class="widget-title"><?php echo __('Search', 'sailor-theme'); ?></h3>
             <?php get_search_form(); ?>
           </div><!--/Search Widget -->
 
           <!-- Categories Widget -->
           <div class="categories-widget widget-item">
-            <h3 class="widget-title">Categories</h3>
+            <h3 class="widget-title"><?php echo __('Categories', 'sailor-theme'); ?></h3>
             <ul class="mt-3">
               <?php wp_list_categories(['title_li' => '']); ?>
             </ul>
@@ -93,7 +93,7 @@ get_header();
 
           <!-- Recent Posts Widget -->
           <div class="recent-posts-widget widget-item">
-            <h3 class="widget-title">Recent Posts</h3>
+            <h3 class="widget-title"><?php echo __('Recent Posts', 'sailor-theme'); ?></h3>
             <?php
             $recent_posts = wp_get_recent_posts(['numberposts' => 5]);
             foreach($recent_posts as $post): ?>
@@ -109,7 +109,7 @@ get_header();
 
           <!-- Tags Widget -->
           <div class="tags-widget widget-item">
-            <h3 class="widget-title">Tags</h3>
+            <h3 class="widget-title"><?php echo __('Tags', 'sailor-theme'); ?></h3>
             <ul>
               <?php wp_tag_cloud(['smallest' => 10, 'largest' => 15, 'unit' => 'px', 'format' => 'list']); ?>
             </ul>

@@ -75,9 +75,9 @@ get_header();
             </ul>
           </div>
           <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-            <h2>Exercitationem repudiandae officiis neque suscipit</h2>
+              <h2><?php echo __('Exercitationem repudiandae officiis neque suscipit', 'sailor-theme'); ?></h2>
             <p>
-              Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                <?php echo __('Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.', 'sailor-theme'); ?>
             </p>
           </div>
         </div>

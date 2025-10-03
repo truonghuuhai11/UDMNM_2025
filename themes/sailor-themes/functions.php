@@ -19,10 +19,12 @@ function sailor_theme_assets() {
   wp_enqueue_script('purecounter', get_template_directory_uri().'/assets/vendor/purecounter/purecounter_vanilla.js', array(), null, true);
   wp_enqueue_script('waypoints', get_template_directory_uri().'/assets/vendor/waypoints/noframework.waypoints.js', array(), null, true);
   wp_enqueue_script('swiper', get_template_directory_uri().'/assets/vendor/swiper/swiper-bundle.min.js', array(), null, true);
+}
+
+add_action('wp_enqueue_scripts', 'sailor_theme_assets');
+
 // Bật lazy load ảnh cho toàn bộ website (WordPress 5.5+)
 add_filter('wp_lazy_loading_enabled', '__return_true');
-}
-add_action('wp_enqueue_scripts', 'sailor_theme_assets');
 
 // Hỗ trợ ảnh đại diện bài viết
 add_theme_support('post-thumbnails');
@@ -41,17 +43,17 @@ require_once get_template_directory() . '/inc/class-bootstrap-navwalker.php';
 // Đăng ký Custom Post Type: Portfolio
 function sailor_register_portfolio_cpt() {
   $labels = array(
-    'name' => 'Portfolios',
-    'singular_name' => 'Portfolio',
-    'add_new' => 'Thêm mới',
-    'add_new_item' => 'Thêm Portfolio mới',
-    'edit_item' => 'Sửa Portfolio',
-    'new_item' => 'Portfolio mới',
-    'view_item' => 'Xem Portfolio',
-    'search_items' => 'Tìm Portfolio',
-    'not_found' => 'Không tìm thấy',
-    'not_found_in_trash' => 'Không tìm thấy trong thùng rác',
-    'menu_name' => 'Portfolio',
+    'name' => __('Portfolios', 'sailor-theme'),
+    'singular_name' => __('Portfolio', 'sailor-theme'),
+    'add_new' => __('Thêm mới', 'sailor-theme'),
+    'add_new_item' => __('Thêm Portfolio mới', 'sailor-theme'),
+    'edit_item' => __('Sửa Portfolio', 'sailor-theme'),
+    'new_item' => __('Portfolio mới', 'sailor-theme'),
+    'view_item' => __('Xem Portfolio', 'sailor-theme'),
+    'search_items' => __('Tìm Portfolio', 'sailor-theme'),
+    'not_found' => __('Không tìm thấy', 'sailor-theme'),
+    'not_found_in_trash' => __('Không tìm thấy trong thùng rác', 'sailor-theme'),
+    'menu_name' => __('Portfolio', 'sailor-theme'),
   );
   $args = array(
     'labels' => $labels,
@@ -68,14 +70,14 @@ add_action('init', 'sailor_register_portfolio_cpt');
 // Đăng ký Custom Taxonomy: Loại Portfolio
 function sailor_register_portfolio_taxonomy() {
   $labels = array(
-    'name' => 'Loại Portfolio',
-    'singular_name' => 'Loại Portfolio',
-    'search_items' => 'Tìm loại',
-    'all_items' => 'Tất cả loại',
-    'edit_item' => 'Sửa loại',
-    'update_item' => 'Cập nhật loại',
-    'add_new_item' => 'Thêm loại mới',
-    'menu_name' => 'Loại Portfolio',
+    'name' => __('Loại Portfolio', 'sailor-theme'),
+    'singular_name' => __('Loại Portfolio', 'sailor-theme'),
+    'search_items' => __('Tìm loại', 'sailor-theme'),
+    'all_items' => __('Tất cả loại', 'sailor-theme'),
+    'edit_item' => __('Sửa loại', 'sailor-theme'),
+    'update_item' => __('Cập nhật loại', 'sailor-theme'),
+    'add_new_item' => __('Thêm loại mới', 'sailor-theme'),
+    'menu_name' => __('Loại Portfolio', 'sailor-theme'),
   );
   $args = array(
     'labels' => $labels,
@@ -102,7 +104,7 @@ add_action('add_meta_boxes', 'sailor_add_portfolio_meta_box');
 // Hiển thị field trong admin
 function sailor_portfolio_link_callback($post) {
   $value = get_post_meta($post->ID, '_portfolio_link', true);
-  echo '<label for="portfolio_link">URL: </label>';
+  echo '<label for="portfolio_link">' . __('URL:', 'sailor-theme') . ' </label>';
   echo '<input type="text" id="portfolio_link" name="portfolio_link" value="' . esc_attr($value) . '" style="width:100%">';
 }
 

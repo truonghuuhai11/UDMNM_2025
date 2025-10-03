@@ -8,7 +8,7 @@ get_header();
   <!-- Page Title -->
   <div class="page-title light-background">
     <div class="container d-lg-flex justify-content-between align-items-center">
-      <h1 class="mb-2 mb-lg-0"><?php the_title(); ?></h1>
+  <h1 class="mb-2 mb-lg-0"><?php echo __('Portfolio', 'sailor-theme'); ?></h1>
       <nav class="breadcrumbs">
         <ol>
           <li><a href="<?php echo home_url(); ?>">Home</a></li>
@@ -30,7 +30,7 @@ get_header();
         ));
         ?>
         <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter="*" class="filter-active"><?php echo __('All', 'sailor-theme'); ?></li>
           <?php foreach($terms as $term): ?>
             <li data-filter=".filter-<?php echo esc_attr($term->slug); ?>"><?php echo esc_html($term->name); ?></li>
           <?php endforeach; ?>
@@ -61,7 +61,7 @@ get_header();
               <p><?php echo get_the_excerpt(); ?></p>
                 <?php $link = get_post_meta(get_the_ID(), '_portfolio_link', true); ?>
               <?php if ($link): ?>
-                <p><a href="<?php echo esc_url($link); ?>" target="_blank" rel="noopener" class="btn btn-sm btn-primary">View Product</a></p>
+                <p><a href="<?php echo esc_url($link); ?>" target="_blank" rel="noopener" class="btn btn-sm btn-primary"><?php echo __('View Product', 'sailor-theme'); ?></a></p>
               <?php endif; ?>
               <a href="<?php echo get_the_post_thumbnail_url(); ?>" title="<?php the_title(); ?>" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
             </div>
@@ -71,7 +71,7 @@ get_header();
             wp_reset_postdata();
           else:
           ?>
-          <p>Chưa có Portfolio nào.</p>
+          <p><?php echo __('No Portfolio found.', 'sailor-theme'); ?></p>
           <?php endif; ?>
         </div><!-- End Portfolio Container -->
       </div>

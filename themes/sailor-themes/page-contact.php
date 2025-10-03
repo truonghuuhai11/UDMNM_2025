@@ -8,7 +8,7 @@ get_header();
 
   <div class="page-title light-background">
     <div class="container d-lg-flex justify-content-between align-items-center">
-      <h1 class="mb-2 mb-lg-0">Contact</h1>
+  <h1 class="mb-2 mb-lg-0"><?php echo __('Contact', 'sailor-theme'); ?></h1>
       <nav class="breadcrumbs">
         <ol>
           <li><a href="<?php echo home_url(); ?>">Home</a></li>
@@ -32,7 +32,7 @@ get_header();
           <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
             <i class="bi bi-geo-alt flex-shrink-0"></i>
             <div>
-              <h3>Address</h3>
+               <h3><?php echo __('Address', 'sailor-theme'); ?></h3>
               <p>A108 Adam Street, New York, NY 535022</p>
             </div>
           </div><!-- End Info Item -->
@@ -40,7 +40,7 @@ get_header();
           <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
             <i class="bi bi-telephone flex-shrink-0"></i>
             <div>
-              <h3>Call Us</h3>
+               <h3><?php echo __('Call Us', 'sailor-theme'); ?></h3>
               <p>+1 5589 55488 55</p>
             </div>
           </div><!-- End Info Item -->
@@ -48,7 +48,7 @@ get_header();
           <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
             <i class="bi bi-envelope flex-shrink-0"></i>
             <div>
-              <h3>Email Us</h3>
+               <h3><?php echo __('Email Us', 'sailor-theme'); ?></h3>
               <p>info@example.com</p>
             </div>
           </div><!-- End Info Item -->
@@ -56,7 +56,7 @@ get_header();
         </div>
 
         <div class="col-lg-8">
-          <?php echo do_shortcode('[sailor_contact_form]'); ?>
+           <?php echo do_shortcode('[sailor_contact_form]'); ?>
         </div><!-- End Contact Form -->
 
       </div>

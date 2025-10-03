@@ -3,7 +3,7 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title><?php wp_title('|', true, 'right'); ?></title>
+  <!-- WordPress sẽ tự sinh <title> qua add_theme_support('title-tag') -->
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

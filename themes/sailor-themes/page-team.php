@@ -8,7 +8,7 @@ get_header();
   <!-- Page Title -->
   <div class="page-title light-background">
     <div class="container d-lg-flex justify-content-between align-items-center">
-      <h1 class="mb-2 mb-lg-0"><?php the_title(); ?></h1>
+  <h1 class="mb-2 mb-lg-0"><?php echo __('Team', 'sailor-theme'); ?></h1>
       <nav class="breadcrumbs">
         <ol>
           <li><a href="<?php echo home_url(); ?>">Home</a></li>
@@ -26,9 +26,9 @@ get_header();
           <div class="team-member d-flex align-items-start">
             <div class="pic"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
             <div class="member-info">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-              <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+              <h4><?php echo __('Walter White', 'sailor-theme'); ?></h4>
+              <span><?php echo __('Chief Executive Officer', 'sailor-theme'); ?></span>
+              <p><?php echo __('Explicabo voluptatem mollitia et repellat qui dolorum quasi', 'sailor-theme'); ?></p>
               <div class="social">
                 <a href=""><i class="bi bi-twitter-x"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -42,9 +42,9 @@ get_header();
           <div class="team-member d-flex align-items-start">
             <div class="pic"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
             <div class="member-info">
-              <h4>Sarah Jhonson</h4>
-              <span>Product Manager</span>
-              <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+              <h4><?php echo __('Sarah Jhonson', 'sailor-theme'); ?></h4>
+              <span><?php echo __('Product Manager', 'sailor-theme'); ?></span>
+              <p><?php echo __('Aut maiores voluptates amet et quis praesentium qui senda para', 'sailor-theme'); ?></p>
               <div class="social">
                 <a href=""><i class="bi bi-twitter-x"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -58,9 +58,9 @@ get_header();
           <div class="team-member d-flex align-items-start">
             <div class="pic"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
             <div class="member-info">
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-              <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+              <h4><?php echo __('William Anderson', 'sailor-theme'); ?></h4>
+              <span><?php echo __('CTO', 'sailor-theme'); ?></span>
+              <p><?php echo __('Quisquam facilis cum velit laborum corrupti fuga rerum quia', 'sailor-theme'); ?></p>
               <div class="social">
                 <a href=""><i class="bi bi-twitter-x"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -74,9 +74,9 @@ get_header();
           <div class="team-member d-flex align-items-start">
             <div class="pic"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
             <div class="member-info">
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
-              <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+              <h4><?php echo __('Amanda Jepson', 'sailor-theme'); ?></h4>
+              <span><?php echo __('Accountant', 'sailor-theme'); ?></span>
+              <p><?php echo __('Dolorum tempora officiis odit laborum officiis et et accusamus', 'sailor-theme'); ?></p>
               <div class="social">
                 <a href=""><i class="bi bi-twitter-x"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
