@@ -3,6 +3,8 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!-- Thêm thẻ meta description tối ưu SEO -->
+  <meta name="description" content="<?php echo get_bloginfo('description'); ?>">
   <!-- WordPress sẽ tự sinh <title> qua add_theme_support('title-tag') -->
   <?php wp_head(); ?>
 </head>
